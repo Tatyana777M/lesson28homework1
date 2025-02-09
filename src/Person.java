@@ -11,19 +11,16 @@ public class Person {
     }
     @Override
     public String toString() {
-        return name + " (" + age + " лет)";
+        return name + " (" + age + " years)";
     }
     public static void bubbleSort(Person[] people) {
         int a = people.length;
-        boolean swapped;
         for (int i = 0; i < a - 1; i++) {
-            swapped = false;
             for (int j = 0; j < a - 1 - i; j++) {
                 if (Person.comparePersons(people[j], people[j + 1]) > 0) {
                     Person temp = people[j];
                     people[j] = people[j + 1];
                     people[j + 1] = temp;
-                    swapped = true;
                 }
             }
         }
